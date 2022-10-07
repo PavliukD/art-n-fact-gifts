@@ -42,6 +42,26 @@
 
 .prases-text-wrap{
     width: 60%;
+
+    & h3{
+        font-family: 'Pragmatica Extended';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 45px;
+            color: #475569;
+            margin-bottom: 20px;
+    }
+
+    & p{
+        font-family: 'Pragmatica Extended';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: #475569;
+            width: 60%;
+    }
 }
 
 .prises-img{
