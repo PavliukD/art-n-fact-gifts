@@ -1,0 +1,50 @@
+.expert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 83.15%;
+    background-image: url('../images/Vector\ 17.png');
+    background-repeat: no-repeat;
+    background-image: center;
+    background-size: 100%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    margin-top: 120px;
+}
+
+.expert-wrap{
+    display: flex;
+    align-items: center;
+    width: 49.4%;
+    margin-left: 5.11%;
+    justify-content: space-between;
+
+    & img{
+        width: 30%;
+    }
+}
+
+.expert-text-wrap{
+    margin-left: 11%;
+
+    & h3{
+        font-family: 'Pragmatica Extended';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 45px;
+            color: #475569;
+    }
+
+    & p{
+        font-family: 'Pragmatica Extended';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: #475569;
+            margin-top: 10px;
+            width: 50%;
+    }
+}

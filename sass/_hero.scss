@@ -112,9 +112,23 @@
 
 .hero-main-prises-image-wrap{
     width: 100%;
-
-    outline: 1px solid tomato;
+    height: 313px;
     position: relative;
+    
+    & img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &.second{
+            top: 64%;
+        }
+
+        &.third{
+            top: 48%;
+        }
+    }
 }
 
 .hero-main-prises-bg1{
@@ -146,10 +160,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.hero-prises-wrap{
-    width: 100%;
 }
 
 .hero-prises-wrap {

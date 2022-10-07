@@ -52,6 +52,7 @@ section{
 
 .second-section{
     background-image: url('../images/20-Grainy-Background.png');
+    margin-top: 145px;
 }
 
 h2{
@@ -66,3 +67,7 @@ h2{
 @import './hero';
 @import './facts';
 @import './about';
+@import './terms';
+@import './expert';
+@import './dates';
+@import './prises';

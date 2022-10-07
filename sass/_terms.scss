@@ -1,0 +1,113 @@
+.terms-title{
+    text-align: center;
+}
+
+.terms-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    & li{
+        display: block;
+        width: 8.053%;
+    }
+}
+
+.terms-image-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 43.5%;
+    position: relative;
+    
+    &:not(.last){
+        &::after {
+                content: '';
+                display: block;
+                background-image: url('../images/Vector\ 11.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 27.5%;
+                height: 10px;
+                position: absolute;
+                right: -45%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+    }
+}
+
+.terms-img{
+    width: 50%;
+
+    &.first{
+        width: 75%;
+    }
+}
+
+.terms-item{
+    // position: relative;
+    &:not(:last-child){
+        margin-right: 4.813%;
+    }
+}
+
+.terms-item-text{
+    font-family: 'Pragmatica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        margin-top: 30px;
+}
+
+.terms-list{
+    margin-top: 90px;
+}
+
+.terms-img-party{
+    display: block;
+    position: absolute;
+    right: -45%;
+    bottom: -5%;
+    width: 80%;
+}
+
+.terms-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.terms-link-text{
+    font-family: 'Pragmatica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #868BFA;
+    margin-left: 20px;
+}
+
+.terms-partners-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+
+    & li{
+        display: block;
+        width: 11.875%;
+        &:not(:last-child){
+            margin-right: 1.823%;
+        }
+    }
+}
+
+.terms-partners-img{
+    width: 100%;
+}
