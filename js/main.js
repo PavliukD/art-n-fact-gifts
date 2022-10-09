@@ -51,9 +51,11 @@
 (() => {
     const button = document.querySelector('.header-button')
     const menu = document.querySelector('.header-nav')
+    button.addEventListener('click', onClick)
+    console.log(button)
 
-    button.addEventListener('onClick', () => {
-        console.log('wtf')
+    function onClick() {
         menu.classList.toggle('is-hidden')
-    })
+    }
+    
 })();
