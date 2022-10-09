@@ -1,33 +1,102 @@
 .hero{
-    display: flex;
-    justify-content: center;
+    
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: 800px) {
+        width: 76%;
+    }
+
+    @media (min-width: 1400px) {
+        width: 100%;
+        display: flex;
+            justify-content: center;
+            
+    }
 }
 
 .hero-text-wrap{
-    width: 46.7%;
-    margin-right: 10px;
-    padding-left: 8.5%;
-    padding-top: 5.587%;
+    margin: auto;
+    width: 80%;
+    
+    @media (min-width: 1100px) {
+        width: 80%;
+    }
+
+    @media (min-width: 1400px) {
+        margin-right: 10px;
+        width: 46.7%;
+            padding-left: 8.5%;
+            padding-top: 5.587%;
+    }
 }
 
 .hero-slogan{
     font-family: 'Pragmatica';
         font-style: normal;
         font-weight: 400;
-        font-size: 30px;
-        line-height: 42px;
+        font-size: 12px;
+            line-height: 17px;
         color: #475569;
+
+        @media (min-width: 650px) {
+            font-size: 30px;
+                line-height: 42px;
+        }
 }
 
 .hero-banner{
-    width: 53.3%;
-    position: relative;
+    width: 50%;
+    height: 60%;
+    position: absolute;
     background-image: url('../images/Vector\ 19.png');
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    // top: 20px;
+    // top: 50px;
+    height: 30%;
+    right: 0;
+    top: 0;
+    // padding-top: 50px;
 
+    @media (min-width: 600px) {
+        // right: -30px;
+        padding-top: 0;
+        height: 32%;
+        top: 0;
+        
+    }
+
+    @media (min-width: 750px) {
+        right: 0;
+            top: 0;
+            width: 40%;
+            height: 35%;
+            align-items: center;
+    }
+
+    @media (min-width: 900px) {
+        height: 35%;
+    }
+
+
+
+    @media (min-width: 1200px) {
+        height: 35%;
+        width: 30%;
+        top: 50px;
+    }
+
+    @media (min-width: 1400px) {
+        width: 53.3%;
+        // height: 200%;
+        position: relative;
+        height: auto;
+    }
 }
 
 .hero-banner-image{
@@ -79,6 +148,10 @@
 
 .hero-logo{
     margin-top: 40px;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 .hero-text{
@@ -86,17 +159,31 @@
     font-family: 'Pragmatica';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 33px;
+font-size: 12px;
+    line-height: 17px;
     color: #475569;
+
+    @media (min-width: 650px) {
+            font-size: 18px;
+                line-height: 33px;
+    }
 }
 
 .hero-arrow{
     position: absolute;
     width: 40%;
     height: 70%;
-    right: -100px;
+    right: -120px;
     top: 24px;
+    display: none;
+
+    @media (min-width: 1100px) {
+        display: block;
+    }
+
+    @media (min-width: 1500px) {
+        right: -100px;
+    }
 }
 
 .hero-main-prises-list{
@@ -121,11 +208,24 @@
     
     & img{
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 120%;
+        
+        transform: translate(-70%, -60%);
         left: 18%;
+        width: 150%;
+        top: 55%;
+        left: 45%;
+
+        @media (min-width: 1000px) {
+            width: 130%;
+            top: 50%;
+                left: 50%;
+                transform: translate(-70%, -50%);
+        }
+
+        @media (min-width: 1200px) {
+            width: 120%;
+            transform: translate(-80%, -50%);
+        }
 
 
         &.second{
@@ -135,7 +235,7 @@
 
         &.third{
             
-            
+            transform: translate(-50%, -50%);
             top: 44%;
             width: 180%;
 
@@ -188,9 +288,36 @@
 }
 
 .hero-prises{
-    width: 100%;
+    
     display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
     justify-content: space-between;
+
+    & li{
+        &:nth-child(n+4){
+            margin-top: 30px;
+        }
+    }
+
+    @media (min-width: 540px) {
+        width: 70%;
+    }
+
+
+    @media (min-width: 640px) {
+        width: 60%;
+    }
+
+    @media (min-width: 750px) {
+        width: 100%;
+         & li{
+            &:nth-child(n+4) {
+                    margin-top: 0;
+                }
+         }
+    }
 }
 
 .hero-prises-wrap {

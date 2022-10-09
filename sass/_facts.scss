@@ -48,11 +48,27 @@
             font-family: 'Pragmatica';
             font-style: normal;
             font-weight: 400;
-            font-size: 28.6301px;
-            line-height: 43px;
+            
             position: absolute;
             right: 40px;
-            bottom: 90px;
+            bottom: 40px;
+            
+
+            @media (min-width: 800px) {
+                font-size: 18px;
+                line-height: 1.3;
+                bottom: 50px;
+            }
+
+            @media (min-width: 1000px) {
+                bottom: 70px;
+            }
+
+            @media (min-width: 1200px) {
+                font-size: 28.6301px;
+                    line-height: 43px;
+                    bottom: 90px;
+            }
         }
 
    &.mith{

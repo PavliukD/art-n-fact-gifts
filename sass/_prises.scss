@@ -84,10 +84,15 @@
         font-family: 'Pragmatica Extended';
             font-style: normal;
             font-weight: 700;
-            font-size: 32px;
-            line-height: 45px;
+            font-size: 16px;
+                line-height: 22px;
             color: #475569;
             margin-bottom: 20px;
+
+            @media (min-width: 700px) {
+                font-size: 32px;
+                    line-height: 45px;
+            }
     }
 
     & p{

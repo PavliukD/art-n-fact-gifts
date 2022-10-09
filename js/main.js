@@ -47,3 +47,13 @@
             // table.style.width = `${(marg * 4) + 32 * 4 + 4}px`
         }, 500)
 })();
+
+(() => {
+    const button = document.querySelector('.header-button')
+    const menu = document.querySelector('.header-nav')
+
+    button.addEventListener('onClick', () => {
+        console.log('wtf')
+        menu.classList.toggle('is-hidden')
+    })
+})();
