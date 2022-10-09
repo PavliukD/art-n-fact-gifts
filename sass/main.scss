@@ -41,8 +41,10 @@ a{
 
 section{
     width: 100%;
+    max-width: 1920px;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .first-section{
@@ -59,9 +61,25 @@ h2{
     font-family: 'Pragmatica';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 98px;
+    line-height: 1.53;
     color: #475569;
+    font-size: 28px;
+    
+    @media (min-width: 1000px){
+        font-size: 36px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 48px;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 56px;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 64px;
+    }
 }
 
 @import './hero';
