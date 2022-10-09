@@ -1612,7 +1612,7 @@ header button {
   background-color: transparent;
   padding: 0;
 }
-@media (min-width: 970px) {
+@media (min-width: 1100px) {
   header button {
     display: none;
   }
@@ -1643,15 +1643,16 @@ header button {
   font-size: 12px;
   line-height: 18px;
   color: #475569;
+  text-align: center;
 }
-@media (max-width: 969px) {
+@media (max-width: 1100px) {
   .header-nav nav a {
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 22px;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1170px) {
   .header-nav nav a {
     font-size: 14px;
     line-height: 22px;
@@ -1663,14 +1664,14 @@ header button {
     line-height: 24px;
   }
 }
-@media (min-width: 970px) {
+@media (min-width: 1100px) {
   .header-nav nav {
     flex-direction: row;
     justify-content: space-between;
     width: 65%;
   }
 }
-@media (min-width: 970px) {
+@media (min-width: 1100px) {
   .header-nav {
     display: flex;
     margin-left: 4%;
@@ -1689,7 +1690,7 @@ header button {
 .header-nav.is-hidden {
   display: none;
 }
-@media (min-width: 970px) {
+@media (min-width: 1100px) {
   .header-nav.is-hidden {
     display: flex;
   }
@@ -1701,20 +1702,20 @@ header button {
   font-weight: 700;
   font-size: 12px;
   line-height: 18px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   text-align: center;
   color: #FFFFFF;
   background-color: #E073F6;
   border-radius: 91px;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1250px) {
   .header-accept {
     font-size: 14px;
     line-height: 22px;
     padding: 10px 15px;
   }
 }
-@media (min-width: 1325px) {
+@media (min-width: 1700px) {
   .header-accept {
     font-size: 18px;
     line-height: 25px;
