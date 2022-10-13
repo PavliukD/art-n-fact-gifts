@@ -52,10 +52,99 @@
     const button = document.querySelector('.header-button')
     const menu = document.querySelector('.header-nav')
     button.addEventListener('click', onClick)
-    console.log(button)
 
     function onClick() {
         menu.classList.toggle('is-hidden')
     }
     
+})();
+
+// слайдер для фактов
+
+(() => {
+    const lists = document.querySelectorAll('[data-facts-list]')
+    const controls  = document.querySelectorAll('[data-control]')
+    const pages = document.querySelectorAll('.control-page')
+    lists.forEach(list => {
+        console.log(list.dataset)
+    })
+
+    lists.forEach(list => {
+        let itemCounter = 0
+        controls.forEach(ctrl => {
+            if (ctrl.dataset.control !== list.dataset.factsList){
+                return
+            }
+            let arr = []
+
+            for (let i = 0; i < list.children.length; i++){
+                arr.push(`<li class="control-list-item" data-id="${i}"></li>`)
+            }
+
+            const html = arr.join(' ')
+
+            ctrl.innerHTML = html
+            const step = list.children[0].clientWidth
+
+            let itemCounter = 0
+            ctrl.children[itemCounter].classList.add('active')
+
+            const {children}  = ctrl
+
+            for (let i = 0; i < children.length; i++){
+                children[i].addEventListener('click', (e) => {
+                    itemCounter = Number(e.currentTarget.dataset.id)
+                    list.style.transform= `translateX(-${step*itemCounter}px)`
+                    for (let i = 0; i < children.length; i++){
+                        children[i].classList.remove('active')
+                    }
+                    e.currentTarget.classList.add('active')
+                    pages.forEach(page => {
+                        if (page.dataset.for !== list.dataset.factsList){
+                            return
+                        }
+                        page.textContent = `${itemCounter + 1}/${lenght}`
+                    })
+                })
+            }
+            const timer = Number(list.dataset.timer)
+            const lenght = list.children.length
+
+            pages.forEach(page => {
+                if (page.dataset.for !== list.dataset.factsList){
+                    return
+                }
+                page.textContent = `${itemCounter + 1}/${lenght}`
+            })
+
+            setInterval(() => {
+                const number = itemCounter + 1
+                for (let i = 0; i < children.length; i++){
+                    children[i].classList.remove('active')
+                }
+                if (number === lenght){
+                    itemCounter = 0
+                    children[itemCounter].classList.add('active')
+                    list.style.transform= `translateX(-${step*itemCounter}px)`
+                    pages.forEach(page => {
+                        if (page.dataset.for !== list.dataset.factsList){
+                            return
+                        }
+                        page.textContent = `${itemCounter + 1}/${lenght}`
+                    })
+                    return
+                }
+                itemCounter++
+                children[itemCounter].classList.add('active')
+                list.style.transform= `translateX(-${step*itemCounter}px)`
+                pages.forEach(page => {
+                    if (page.dataset.for !== list.dataset.factsList){
+                        return
+                    }
+                    page.textContent = `${itemCounter + 1}/${lenght}`
+                })
+            }, timer)
+
+        })
+    })
 })();

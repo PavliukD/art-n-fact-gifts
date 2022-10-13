@@ -483,6 +483,7 @@ h2 {
   position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 @media (max-width: 999px) {
   .facts-wrap {
@@ -575,7 +576,7 @@ h2 {
 }
 
 .facts-list-tez {
-  width: 65.562%;
+  width: 80%;
   font-family: "Pragmatica";
   font-style: normal;
   font-weight: 700;
@@ -609,7 +610,6 @@ h2 {
 }
 
 .facts-list-text {
-  width: 65.562%;
   font-family: "Pragmatica";
   font-style: normal;
   font-weight: 400;
@@ -648,6 +648,57 @@ h2 {
   .facts-image {
     top: 28%;
   }
+}
+
+.facts-list {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-delay: 0;
+}
+
+.fact-list-item {
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.control-list {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateY(-50%);
+}
+.control-list li {
+  background-color: #D9D9D9;
+}
+.control-list li.active {
+  background-color: #A432B8;
+  opacity: 0.5;
+}
+.control-list.fact li {
+  background-color: #FFFFFF;
+  opacity: 0.5;
+}
+.control-list.fact li.active {
+  opacity: 1;
+}
+
+.control-list-item {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+}
+.control-list-item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.facts-list-wrap {
+  width: 90%;
+  overflow: hidden;
 }
 
 .about {
