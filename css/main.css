@@ -1116,6 +1116,10 @@ h2 {
   border: 1px solid #475569;
   border-radius: 100%;
 }
+.dates-final-out:hover {
+  background-color: #CC56EF;
+  border-color: #CC56EF;
+}
 
 .dates-graf-item {
   display: block;
@@ -1137,6 +1141,10 @@ h2 {
   .dates-graf-item {
     margin-left: 13.07%;
   }
+}
+.dates-graf-item:hover {
+  background-color: #CC56EF;
+  border-color: #CC56EF;
 }
 
 .dates-graf {
@@ -1249,7 +1257,7 @@ h2 {
 
 .graf-text {
   position: absolute;
-  width: 90px;
+  width: 100px;
   left: -100%;
   top: 0;
   transform: translateX(-100%);
@@ -1361,8 +1369,8 @@ h2 {
   font-size: 24px;
   line-height: 34px;
   color: #FFFFFF;
-  padding: 20px 55px;
-  max-width: 760px;
+  padding: 10px 55px;
+  max-width: 8000px;
   z-index: 1;
 }
 @media (max-width: 999px) {
@@ -1524,6 +1532,8 @@ h2 {
 .prises {
   margin-top: 90px;
   width: 100%;
+  padding-bottom: 180px;
+  overflow: hidden;
 }
 .prises h2 {
   text-align: center;
@@ -1531,14 +1541,16 @@ h2 {
 }
 
 .prises-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  flex-shrink: 0;
 }
 @media (min-width: 1100px) {
   .prises-list {
     flex-direction: row;
-    margin-left: 10%;
+    padding-left: 10%;
   }
 }
 .prises-list li {
@@ -1639,6 +1651,40 @@ h2 {
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
+}
+
+.prises-list-wrap {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-delay: 0;
+}
+
+.prises-control-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+@media (max-width: 799px) {
+  .prises-control-list {
+    display: none;
+  }
+}
+
+.prises-control-item {
+  width: 12px;
+  height: 12px;
+  background-color: #FFFFFF;
+  opacity: 0.5;
+  border-radius: 100%;
+}
+.prises-control-item:not(:first-child) {
+  margin-left: 8px;
+}
+.prises-control-item.active {
+  opacity: 1;
 }
 
 header {

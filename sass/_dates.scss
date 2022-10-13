@@ -34,6 +34,11 @@
     transform: translate(-50%, -50%);
     border: 1px solid #475569;
     border-radius: 100%;
+
+    &:hover{
+        background-color: #CC56EF;
+        border-color: #CC56EF;
+    }
 }
 
 .dates-graf-item{
@@ -53,6 +58,11 @@
 
     @media (min-width: 1400px) {
         margin-left: 13.07%;
+    }
+
+    &:hover{
+        background-color: #CC56EF;
+        border-color: #CC56EF;
     }
 }
 
@@ -164,7 +174,7 @@
 
 .graf-text{
     position: absolute;
-    width: 90px;
+    width: 100px;
     left: -100%;
     top: 0;
     transform: translateX(-100%);
@@ -177,8 +187,8 @@
     @media (min-width: 1000px) {
         top: auto;
         bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
+        left: 50%;
+        transform: translateX(-50%);
     }
     .dates-final-out & {
         top: -10px;
@@ -283,13 +293,14 @@
     font-size: 24px;
     line-height: 34px;
     color: #FFFFFF;
-    padding: 20px 55px;
-    max-width: 760px;
+    padding: 10px 55px;
+    max-width: 8000px;
     z-index: 1;
 
     @media (max-width: 999px) {
         font-size: 12px;
             line-height: 17px;
+            
     }
 
 }

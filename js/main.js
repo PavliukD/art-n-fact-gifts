@@ -65,9 +65,6 @@
     const lists = document.querySelectorAll('[data-facts-list]')
     const controls  = document.querySelectorAll('[data-control]')
     const pages = document.querySelectorAll('.control-page')
-    lists.forEach(list => {
-        console.log(list.dataset)
-    })
 
     lists.forEach(list => {
         let itemCounter = 0
@@ -86,7 +83,7 @@
             ctrl.innerHTML = html
             const step = list.children[0].clientWidth
 
-            let itemCounter = 0
+            // let itemCounter = 0
             ctrl.children[itemCounter].classList.add('active')
 
             const {children}  = ctrl
@@ -147,4 +144,63 @@
 
         })
     })
+})();
+
+//слайдер для подарков
+
+(() => {
+
+    const wrap = document.querySelector('.prises-list-wrap')
+    const controls = document.querySelector('.prises-control-list')
+
+    if (wrap.clientWidth < 799){
+        return
+    }
+
+    let itemCounter = 0
+        let arr = []
+
+        for (let i = 0; i < wrap.children.length; i++){
+            arr.push(`<li class="prises-control-item" data-id="${i}"></li>`)
+        }
+
+    const html = arr.join(' ')
+
+    controls.innerHTML = html
+    const step = wrap.children[0].clientWidth
+
+    controls.children[itemCounter].classList.add('active')
+
+    const {children}  = controls
+
+    for (let i = 0; i < children.length; i++){
+    children[i].addEventListener('click', (e) => {
+        itemCounter = Number(e.currentTarget.dataset.id)
+        wrap.style.transform= `translateX(-${step*itemCounter}px)`
+        for (let i = 0; i < children.length; i++){
+            children[i].classList.remove('active')
+        }
+        e.currentTarget.classList.add('active')
+    })
+    }
+
+    const timer = Number(wrap.dataset.timer)
+    const lenght = wrap.children.length
+
+    setInterval(() => {
+
+        const number = itemCounter + 1
+        for (let i = 0; i < children.length; i++){
+            children[i].classList.remove('active')
+        }
+        if (number === lenght){
+            itemCounter = 0
+            children[itemCounter].classList.add('active')
+            wrap.style.transform= `translateX(-${step*itemCounter}px)`
+            return
+        }
+        itemCounter++
+        children[itemCounter].classList.add('active')
+        wrap.style.transform= `translateX(-${step*itemCounter}px)`
+    }, timer)
 })();
