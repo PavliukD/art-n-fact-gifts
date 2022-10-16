@@ -48,6 +48,7 @@
         }, 500)
 })();
 
+//мобильное меню
 (() => {
     const button = document.querySelector('.header-button')
     const menu = document.querySelector('.header-nav')
@@ -67,6 +68,9 @@
     const pages = document.querySelectorAll('.control-page')
 
     lists.forEach(list => {
+        console.log(list.dataset.factsList)
+        const buttons = document.querySelectorAll(`[data-btnFor="${list.dataset.factsList}"]`)
+
         let itemCounter = 0
         controls.forEach(ctrl => {
             if (ctrl.dataset.control !== list.dataset.factsList){
@@ -83,7 +87,6 @@
             ctrl.innerHTML = html
             const step = list.children[0].clientWidth
 
-            // let itemCounter = 0
             ctrl.children[itemCounter].classList.add('active')
 
             const {children}  = ctrl
@@ -141,6 +144,46 @@
                     page.textContent = `${itemCounter + 1}/${lenght}`
                 })
             }, timer)
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const number = itemCounter + 1
+                    if (btn.dataset.direction === 'left'){
+                        if (number === 1){
+                            itemCounter = lenght - 1 
+                            moveList()
+                            return
+                        }
+                        itemCounter--
+                        moveList()
+                        return
+                    }
+                    if (btn.dataset.direction === 'right'){
+                        if (number === lenght){
+                            itemCounter = 0
+                            moveList()
+                            return
+                        }
+                        itemCounter++
+                        moveList()
+                        return
+                    } 
+
+                    function moveList(){
+                        for (let i = 0; i < children.length; i++){
+                            children[i].classList.remove('active')
+                        }
+                        children[itemCounter].classList.add('active')
+                        list.style.transform= `translateX(-${step*itemCounter}px)`
+                        pages.forEach(page => {
+                            if (page.dataset.for !== list.dataset.factsList){
+                                return
+                            }
+                            page.textContent = `${itemCounter + 1}/${lenght}`
+                        })
+                    }
+                })
+            })
 
         })
     })
@@ -203,4 +246,41 @@
         children[itemCounter].classList.add('active')
         wrap.style.transform= `translateX(-${step*itemCounter}px)`
     }, timer)
+})();
+
+//список победителей
+
+(() => {
+    const points = document.querySelectorAll('.dates-graf-item')
+    const final = document.querySelector('.dates-final-out')
+    const notifications = document.querySelectorAll('.graf-not')
+
+    points.forEach(point => {
+        point.addEventListener('click', (e) => {
+            const notification = point.querySelector('.graf-not')
+            notification.classList.toggle('is-hidden')
+
+            const finalNotification = final.querySelector('.graf-not')
+            finalNotification.classList.add('is-hidden')
+
+            points.forEach(pnt => {
+                if(e.currentTarget === pnt){
+                    return
+                }
+                const not = pnt.querySelector('.graf-not')
+                not.classList.add('is-hidden')
+            })
+
+        })
+    })
+
+    final.addEventListener('click', (e) => {
+        const notification = final.querySelector('.graf-not')
+        notification.classList.toggle('is-hidden')
+
+        points.forEach(point => {
+            const notification = point.querySelector('.graf-not')
+            notification.classList.add('is-hidden')
+        })
+    })
 })();

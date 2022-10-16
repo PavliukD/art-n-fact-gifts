@@ -3,17 +3,18 @@ header{
  background-color: white;
  display: flex;
  justify-content: space-between;
+ align-items: center;
  position: relative;
- padding-top: 42px;
- padding-bottom: 42px;
+ padding-top: 30px;
+ padding-bottom: 30px;
 
-    padding-left: 5%;
-    padding-right: 5%;
+padding-left: 7%;
+padding-right: 7%;
 
 
  @media (min-width: 1500px) {
-    padding-left: 9%;
-    padding-right: 9%;
+    padding-left: 8%;
+    padding-right: 8%;
  }
 
 
@@ -30,7 +31,6 @@ header{
 
 .header-nav{
     position: absolute;
-
     display: flex;
     // display: none;
     width: 100%;
@@ -74,6 +74,10 @@ header{
                     font-size: 16px;
                         line-height: 24px;
                 }
+            
+            &:hover{
+                text-decoration: underline;
+            } 
         }
         
 
@@ -133,4 +137,14 @@ header{
                         line-height: 25px;
                     padding: 15px 25px;
         }
+}
+
+.header-logo{
+    width: 306px;
+    height: 35px;
+
+    @media (max-width: 1099px) {
+        width: 272px;
+        height: 42px;
+    }
 }

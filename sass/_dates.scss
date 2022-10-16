@@ -3,6 +3,10 @@
     margin: auto;
     margin-top: 190px;
 
+    @media (max-width: 800px) {
+        margin-top: 100px;
+    }
+
     & h2{
         text-align: center;
         margin-bottom: 70px;
@@ -60,10 +64,10 @@
         margin-left: 13.07%;
     }
 
-    &:hover{
-        background-color: #CC56EF;
-        border-color: #CC56EF;
-    }
+    // &:hover{
+    //     background-color: #CC56EF;
+    //     border-color: #CC56EF;
+    // }
 }
 
 .dates-graf{
@@ -131,12 +135,12 @@
     height: 35px;
 
     @media (max-width: 999px) {
-            transform: rotate(90deg);
-                left: 70px;
-                top: 165px;
-                width: 275px;
-                height: 40px;
-                margin: 0;
+        transform: rotate(90deg);
+        left: 70px;
+        top: 165px;
+        width: 275px;
+        height: 40px;
+        margin: 0;
     }
 
     @media (min-width: 1200px) {
@@ -175,20 +179,22 @@
 .graf-text{
     position: absolute;
     width: 100px;
-    left: -100%;
-    top: 0;
-    transform: translateX(-100%);
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
     text-align: center;
     font-family: 'Pragmatica';
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 12px;
+        line-height: 17px;
     @media (min-width: 1000px) {
         top: auto;
         bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 18px;
+        line-height: 25px;
     }
     .dates-final-out & {
         top: -10px;
@@ -293,14 +299,14 @@
     font-size: 24px;
     line-height: 34px;
     color: #FFFFFF;
-    padding: 10px 55px;
+    padding: 15px 55px;
     max-width: 8000px;
     z-index: 1;
 
     @media (max-width: 999px) {
         font-size: 12px;
-            line-height: 17px;
-            
+        line-height: 17px;
+        padding: 10px 20px;
     }
 
 }
@@ -315,6 +321,7 @@
 
     @media (max-width: 999px) {
         flex-direction: column-reverse;
+        margin-top: 45px;
     }
 
     & p{
@@ -355,32 +362,40 @@
             }
 
             @media (min-width: 1400px) {
-                padding: 50px 120px;
+                padding: 50px 100px;
                     background-size: 100%;
             }
     }
 }
 
 .graf-not{
-    display: none;
+    // display: none;
     width: 683px;
     height: 392px;
     backdrop-filter: blur(12.5px);
     border-radius: 29px;
     background: rgba(255, 255, 255, 0.5);
-    z-index: 99;
+    z-index: 999;
     position: absolute;
     bottom: -70px;
     transform: translate(-50%, 100%);
     padding: 40px 70px;
 
-    .dates-graf-item:hover &{
-        display: block;
+    @media (max-width: 800px) {
+        display: none;
     }
 
-    .dates-final-out:hover &{
-        display: block;
+    &.is-hidden{
+        display: none;
     }
+
+    // .dates-graf-item:hover &{
+    //     display: block;
+    // }
+
+    // .dates-final-out:hover &{
+    //     display: block;
+    // }
 }
 
 .graf-not-title{
@@ -458,4 +473,34 @@
                 color: #FFFFFF;
                 margin-left: 10px;
         }
+}
+
+.dates-all-winners{
+    display: flex;
+    background-color:#E073F6;
+    border-radius: 56.8054px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    margin-top: 25px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    & p{
+        font-family: 'Pragmatica';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 17px;
+        color: #FFFFFF;
+    }
+
+    & img{
+        width: 15px;
+        height: 18px;
+        margin-right: 10px;
+    }
 }

@@ -10,15 +10,17 @@
 </head>
 <body>
     <header>
-        <img src="./images/hero-logo.png" alt="">
+        <svg class="header-logo">
+            <use href="./images/symbol-defs.svg#icon-logo" ></use>
+        </svg>
         <div class="header-nav is-hidden">
             <nav >
-                <a href="">О проекте</a>
-                <a href="">Условия</a>
-                <a href="">Даты проведения</a>
-                <a href="">Миф или ФАКТ?</a>
-                <a href="">Эксперты</a>
-                <a href="">Призы</a>
+                <a href="#about">О проекте</a>
+                <a href="#terms">Условия</a>
+                <a href="#dates">Даты проведения</a>
+                <a href="#facts">Миф или ФАКТ?</a>
+                <a href="#expert">Эксперты</a>
+                <a href="#prises">Призы</a>
             </nav>
             <a href="" class="header-accept">принять участие в розыгрыше</a>
         </div>
@@ -28,19 +30,29 @@
     </header>
     <section class="first-section">
         <div class="hero">
-            <div class="hero-text-wrap">
-                <h2 class="hero-title">ДОВЕРЯЙ ФАКТАМ</h2>
-                <div class="hero-slogan-wrap">
-                    <div>
-                        <p class="hero-slogan">и выигрывай призы от</p>
-                        <img src="./images/hero-logo.png" alt="" class="hero-logo">
-                        <p class="hero-text">
-                            c 1 ноября 2022 по 10 января 2023
-                            регистрируй чеки в программе лояльности и получи шанс выиграть один из главных призов
-                        </p>
+            <div class="hero-main">
+                <div class="hero-text-wrap">
+                    <h2 class="hero-title">ДОВЕРЯЙ ФАКТАМ</h2>
+                    <div class="hero-slogan-wrap">
+                        <div>
+                            <p class="hero-slogan">и выигрывай призы от</p>
+                            <svg class="hero-logo">
+                                <use href="./images/symbol-defs.svg#icon-logo"></use>
+                            </svg>
+                            <p class="hero-text">
+                                c 1 ноября 2022 по 10 января 2023
+                                регистрируй чеки в программе лояльности и получи шанс выиграть один из главных призов
+                            </p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="hero-arrow">
                     </div>
-                    <img src="./images/arrow.png" alt="" class="hero-arrow">
+                    
                 </div>
+                <div class="hero-banner">
+                    <img src="./images/Group 229.png" alt="" class="hero-banner-image">
+                </div>
+            </div>
+            <div class="hero-more-information">
                 <ul class="hero-main-prises-list">
                     <li>
                         <div class="hero-main-prises-image-wrap">
@@ -91,12 +103,8 @@
                 </ul>
                 <p class="hero-more-500">более 500 ценных призов</p>
             </div>
-            <div class="hero-banner">
-                <img src="./images/Group 229.png" alt="" class="hero-banner-image">
-
-            </div>
         </div>
-        <div class="facts">
+        <div class="facts" id="facts">
             <h2 class="facts-title">А ТЫ ЗНАЛ, ЧТО...</h2>
             <div class="facts-section">
                 <div class="facts-wrap mith">
@@ -136,6 +144,12 @@
                     <span data-for="mif" class="control-page">1/7</span>
                     <ul data-control="mif" class="control-list">
                     </ul>
+                    <button class="card-button left" data-direction="left" data-btnFor="mif">
+                        <img src="./images/arrow-grey-left.png" alt="">
+                    </button>
+                    <button class="card-button right" data-direction="right" data-btnFor="mif">
+                        <img src="./images/arrow-grey-rigth.png" alt="">
+                    </button>
                 </div>
                 <div class="facts-wrap fact">
                     <h3 class="facts-section-title fact">ФАКТ</h3>
@@ -163,10 +177,16 @@
                     <span data-for="fact" class="control-page">1/7</span>
                     <ul data-control="fact" class="control-list fact">
                     </ul>
+                    <button class="card-button left" data-direction="left" data-btnFor="fact">
+                        <img src="./images/arrow-white-left.png" alt="">
+                    </button>
+                    <button class="card-button right" data-direction="right" data-btnFor="fact">
+                        <img src="./images/arrow-white-right.png" alt="">
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="about">
             <div class="about-text-block">
                 <h2 class="about-title">О ПРОЕКТЕ<br>
                 «ДОВЕРЯЙ ФАКТАМ»</h2>
@@ -194,8 +214,8 @@
                         14 Max Pro,
                         аппарат для домашнего ухода за кожей BORK, фен Dyson, холодильник для косметики, наполненный косметикой Art&Fact или
                         один из 500 других ценных призов.<br>
-                    
-                        Каждые 2 недели мы разыгрываем 100 призов!
+                        <span class="about-text-piece">Каждые 2 недели мы разыгрываем 100 призов!</span>
+                        
                     </p>
                     <img src="./images/Group 230.png" alt="" class="about-text-img">
                 </div>
@@ -203,10 +223,11 @@
             <div class="about-image-wrap">
                 <img src="./images/Group 223.png" alt="" class="about-image">
             </div>
+            <img src="./images/Group 169.png" alt="" class="about-img">
         </div>
     </section>
     <section class="second-section">
-        <div class="terms">
+        <div class="terms" id="terms">
             <h2 class="terms-title">УСЛОВИЯ АКЦИИ</h2>
             <ul class="terms-list">
                 <li class="terms-item">
@@ -241,33 +262,41 @@
                 </li>
             </ul>
             <a href="" class="terms-link">
-                <img src="./images/pdf.png" alt="">
+                <img src="./images/pdf.png" alt="" class="terms-lik-img">
                 <p class="terms-link-text">подробные условия акции</p>
             </a>
             <ul class="terms-partners-list">
                 <li>
-                    <img src="./images/Group 72.png" alt="" class="terms-partners-img">
+                    <a href="">
+                        <img src="./images/Group 72.png" alt="" class="terms-partners-img">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/Group 73.png" alt="" class="terms-partners-img">
+                    <a href="">
+                        <img src="./images/Group 73.png" alt="" class="terms-partners-img">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/Group 74.png" alt="" class="terms-partners-img">
+                    <a href="">
+                        <img src="./images/Group 74.png" alt="" class="terms-partners-img">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/Group 75.png" alt="" class="terms-partners-img">
+                    <a href="">
+                        <img src="./images/Group 75.png" alt="" class="terms-partners-img">
+                    </a>
                 </li>
             </ul>
         </div>
-        <div class="dates">
+        <div class="dates" id="dates">
             <h2>ДАТЫ ПРОВЕДЕНИЯ<br>
             РОЗЫГРЫШЕЙ</h2>
             <div class="dates-graf">
-                <div class="dates-graf-item">
+                <div class="dates-graf-item" data-id="1">
                     <div class="graf-line"></div>
                     <div class="graf-point"></div>
                     <span class="graf-text">15 ноября</span>
-                    <div class="graf-not">
+                    <div class="graf-not is-hidden">
                         <p class="graf-not-title">ПОБЕДИТЕЛИ РОЗЫГРЫША</p>
                         <ul class="winners-list">
                             <li>
@@ -307,11 +336,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="dates-graf-item">
+                <div class="dates-graf-item" data-id="2">
                     <div class="graf-line"></div>
                     <div class="graf-point"></div>
                     <span class="graf-text">15 ноября</span>
-                    <div class="graf-not">
+                    <div class="graf-not is-hidden">
                         <p class="graf-not-title">ПОБЕДИТЕЛИ РОЗЫГРЫША</p>
                         <ul class="winners-list">
                             <li>
@@ -351,11 +380,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="dates-graf-item">
+                <div class="dates-graf-item" data-id="3">
                     <div class="graf-line"></div>
                     <div class="graf-point"></div>
                     <span class="graf-text">29 ноября</span>
-                    <div class="graf-not">
+                    <div class="graf-not is-hidden">
                         <p class="graf-not-title">ПОБЕДИТЕЛИ РОЗЫГРЫША</p>
                         <ul class="winners-list">
                             <li>
@@ -395,11 +424,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="dates-graf-item">
+                <div class="dates-graf-item" data-id="4">
                     <div class="graf-line"></div>
                     <div class="graf-point"></div>
                     <span class="graf-text">13 декабря</span>
-                    <div class="graf-not">
+                    <div class="graf-not is-hidden">
                         <p class="graf-not-title">ПОБЕДИТЕЛИ РОЗЫГРЫША</p>
                         <ul class="winners-list">
                             <li>
@@ -439,11 +468,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="dates-graf-item">
+                <div class="dates-graf-item" data-id="5">
                     <div class="graf-line"></div>
                     <div class="graf-point"></div>
                     <span class="graf-text">27 декабря</span>
-                    <div class="graf-not">
+                    <div class="graf-not is-hidden">
                         <p class="graf-not-title">ПОБЕДИТЕЛИ РОЗЫГРЫША</p>
                         <ul class="winners-list">
                             <li>
@@ -489,7 +518,7 @@
                     <div class="dates-final-out">
                         <div class="graf-point"></div>
                         <span class="graf-text">16 января</span>
-                        <div class="graf-not">
+                        <div class="graf-not is-hidden">
                             <p class="graf-not-title">ПОБЕДИТЕЛИ РОЗЫГРЫША</p>
                             <ul class="winners-list">
                                 <li>
@@ -538,12 +567,16 @@
                                 каждые 2 недели!</span>
                 </div>
             </div>
+            <a href="" class="dates-all-winners">
+                <img src="./images/pdf small.png" alt="">
+                <p>список всех победителей</p>
+            </a>
             <div class="how-wrap">
                 <a href="" class="how-much">ПРОВЕРЬ СКОЛЬКО МИФОВ СМОЖЕШЬ УЗНАТЬ ТЫ</a>
                 <p>пройди короткий опрос и узнай, насколько хорошо ты разбираешься в правильном уходе</p>
             </div>
         </div>
-        <div class="expert">
+        <div class="expert" id="expert">
             <h2>НАШ ЭКСПЕРТ</h2>
             <div class="expert-wrap">
                 <img src="./images/expert.png" alt="">
@@ -555,7 +588,7 @@
                 </div>
             </div>
         </div>
-        <div class="prises">
+        <div class="prises" id="prises">
             <h2>ПРИЗЫ</h2>
             <div class="prises-list-wrap" data-timer="5000">
                 <ul class="prises-list">

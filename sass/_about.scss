@@ -2,15 +2,16 @@
     
     margin: auto;
     margin-top: 50px;
-    display: flex;
+
     background-image: url('../images/Rectangle\ 66.png');
     background-size: cover;
     width: 100%;
-    padding-top: 14%;
+    padding-top: 25%;
     @media (min-width: 800px) {
         width: 87.761%;
         padding-left: 8.5%;
             padding-top: 12%;
+            display: flex;
     }
 }
 
@@ -18,20 +19,24 @@
     width: 100%;
 
     @media (min-width: 1400px) {
-        width: 48.511%;
+        width: 55.511%;
+        max-width: 787px;
     }
 }
 
 .about-title{
     text-align: center;
+    margin-bottom: 40px;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1400px) {
         text-align: start;
+        width: 100%;
+        margin-bottom: 0;
     }
 }
 
 .about-text{
-    margin-top: 50px;
+    // margin-top: 50px;
     font-family: 'Pragmatica';
     font-style: normal;
     font-weight: 400;
@@ -40,6 +45,7 @@
     color: #475569;
     padding-left: 30px;
     padding-right: 30px;
+    width: 54.8%;
 
     @media (min-width: 800px) {
         font-size: 14px;
@@ -52,8 +58,9 @@
     }
 
     @media (min-width: 1400px) {
-        width: 83.6%;
+        width: 88.4%;
     }
+
 }
 
 .about-image-wrap{
@@ -61,7 +68,7 @@
 
     @media (min-width: 1400px) {
         display: block;
-        width: 51.5%;
+        // width: 51.5%;
     }
 }
 
@@ -71,7 +78,8 @@
 
 .about-text-img{
     display: block;
-    max-width: 25%;
+    max-width: 40%;
+    max-height: 370px;
 
     &.second{
         margin-left: 0;
@@ -87,13 +95,64 @@
 .about-text-wrap{
     display: flex;
 
+    justify-content: flex-end;
+    align-items: center;
+
     &:nth-child(2n+1){
         flex-direction: row-reverse;
     }
 
+    &:last-child{
+        & p{
+            @media (max-width: 1399px) {
+                padding: 0;
+            margin-right: -30px;
+            }
+        }
+    }
+
     @media (min-width: 1400px) {
         display: block;
+        margin-top: 40px;
+        &:not(:first-child){
+            margin-top: 20px;
+        }
     }
 }
 
 
+.about-text-piece{
+    font-family: 'Pragmatica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 185.1%;
+    color: #475569;
+    margin-top: 20px;
+    display: block;
+
+    @media (min-width: 800px) {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    @media (min-width: 1000px) {
+        font-size: 18px;
+        line-height: 33px;
+    }
+
+    @media (min-width: 1400px) {
+        width: 88.4%;
+    }
+}
+
+
+.about-img{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+
+    @media (min-width: 800px) {
+        display: none;
+    }
+}

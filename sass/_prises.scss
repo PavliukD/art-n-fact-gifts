@@ -17,6 +17,8 @@
     flex-wrap: wrap;
     flex-shrink: 0;
 
+
+
     @media (min-width: 1100px) {
         flex-direction: row;
         padding-left: 10%;
@@ -33,7 +35,21 @@
 
         &:nth-child(2n){
             @media (max-width: 1099px) {
-                flex-direction: row-reverse;
+            flex-direction: row-reverse;
+            }
+        }
+
+        &:nth-child(2n+1){
+            & p{
+                @media (max-width: 1099px) {
+                    margin-left: 50px;
+                    }
+            }
+
+            & h3{
+                @media (max-width: 1099px) {
+                    margin-left: 50px;
+                    }
             }
         }
 
@@ -80,21 +96,25 @@
 
 .prases-text-wrap{
     width: 60%;
-    margin-left: 30px;
+    
+    @media (min-width: 800px) {
+        margin-left: 30px;
+    }
 
     & h3{
         font-family: 'Pragmatica Extended';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-                line-height: 22px;
-            color: #475569;
-            margin-bottom: 20px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+            line-height: 22px;
+        color: #475569;
+        margin-bottom: 10px;
 
-            @media (min-width: 700px) {
-                font-size: 32px;
-                    line-height: 45px;
-            }
+        @media (min-width: 800px) {
+            font-size: 32px;
+                line-height: 45px;
+                margin-bottom: 20px;
+        }
     }
 
     & p{
@@ -104,10 +124,10 @@
             font-size: 12px;
             line-height: 17px;
             color: #475569;
-            width: 80%;
+            width: 85%;
             
             @media (min-width: 1500px) {
-                width: 60%;
+                width: 77%;
             }
     }
 }
@@ -119,7 +139,7 @@
     z-index: 6;
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 20%;
     transform: translateX(-50%);
 }
 
@@ -127,10 +147,10 @@
     width: 100%;
     display: flex;
     flex-shrink: 0;
-
     transition-property: transform;
     transition-duration: 500ms;
     transition-delay: 0;
+
 
 }
 

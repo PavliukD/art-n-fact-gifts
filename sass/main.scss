@@ -28,6 +28,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 
 body{
     margin: 0;
@@ -71,7 +75,11 @@ section{
 }
 
 .first-section{
-    background-image: url('../images/20-Grainy-Background\ \(2\).png');
+    // background-image: url('../images/20-Grainy-Background\ \(2\).png');
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     
 }
 
@@ -103,6 +111,14 @@ h2{
     @media (min-width: 1600px) {
         font-size: 64px;
     }
+}
+
+.blur{
+    background: linear-gradient(201.01deg, #FFFFFF 13.88%, rgba(255, 255, 255, 0.520054) 60.49%, rgba(255, 255, 255, 0) 76.11%);
+    backdrop-filter: blur(27.5px);
+  backdrop-filter: blur(28px); // This be the blur
+  height: 100vh;
+	width: 100%;
 }
 
 @import './hero';
