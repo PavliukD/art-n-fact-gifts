@@ -276,6 +276,7 @@
 }
 
 .card-button{
+    display: block;
     position: absolute;
     top: 55%;
     background-color: transparent;
@@ -287,5 +288,9 @@
 
     &.right{
         right: 30px;
+    }
+
+    @media (max-width: 999px) {
+        display: none;
     }
 }

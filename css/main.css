@@ -70,6 +70,7 @@ section {
   max-width: 1920px;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: auto;
 }
 
 .first-section {
@@ -757,6 +758,7 @@ h2 {
 }
 
 .card-button {
+  display: block;
   position: absolute;
   top: 55%;
   background-color: transparent;
@@ -767,6 +769,11 @@ h2 {
 }
 .card-button.right {
   right: 30px;
+}
+@media (max-width: 999px) {
+  .card-button {
+    display: none;
+  }
 }
 
 .about {
